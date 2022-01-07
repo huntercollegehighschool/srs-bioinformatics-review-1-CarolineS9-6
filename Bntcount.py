@@ -11,4 +11,13 @@ returns {"A": 3, "C": 1, "G": 1, "T": 2}
 """
 
 def ntcount(dna):
-  pass  # delete this line when you start writing your code
+  for x in dna: 
+    if  x != "A" and x != "C" and x != "G" and x != "T":
+      return("error")
+    dicit = {}
+    dna = dna.lower()
+    for a in dna: 
+      dicit.setdefault(a,0)
+      dicit[a] = dicit[a] + 1 
+    return dicit
+  
